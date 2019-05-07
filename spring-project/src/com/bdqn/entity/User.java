@@ -37,6 +37,12 @@ public class User {
         this.name = name;
     }
 
+    public  void initUser(){
+        System.out.println("初始化user对象执行了");
+    }
+    public void destoryUser(){
+        System.out.println("销毁user对象方法执行了");
+    }
    /* @Override
     public String toString() {
         return "User{" +

@@ -8,5 +8,5 @@ package com.bdqn.a;/**
  * @author: lth
  * @create: 2019-05-07 09:30
  **/
-public class UserTest {
+public class CreateBeanTest {
 }

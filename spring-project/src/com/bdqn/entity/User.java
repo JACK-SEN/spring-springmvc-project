@@ -30,12 +30,15 @@ public class User {
     }
 
     public User() {
+        System.out.println("默认构造方法执行了");
     }
 
     public User(Integer userId, String name) {
         this.userId = userId;
         this.name = name;
     }
+
+
 
     public  void initUser(){
         System.out.println("初始化user对象执行了");

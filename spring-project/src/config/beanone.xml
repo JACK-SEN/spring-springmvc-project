@@ -8,7 +8,11 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-    <bean id="user" class="com.bdqn.entity.User"></bean>
-    <bean id="user1" class="com.bdqn.entity.User" scope="prototype" init-method="initUser" destroy-method="destoryUser"></bean>
+   <!--静态工厂创建user
+         id ：设置bean的名字
+         class ： 静态工厂类
+         fantory-method ： 创建对象的工厂方法
+   -->
+   <bean id="user" class="com.bdqn.factory.UserStaticFactory" factory-method="getUserByStaticFactory"></bean>
 
 </beans>

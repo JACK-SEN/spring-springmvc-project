@@ -8,6 +8,16 @@
 	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-    <bean id="user" class="com.bdqn.entity.User"></bean>
-    <bean id="user1" class="com.bdqn.entity.User" scope="prototype" init-method="initUser" destroy-method="destoryUser"></bean>
+   <!--动态工厂创建-->
+   <!--先注入工厂
+      id ：设置工厂的名字
+      class : 动态工厂的名字
+   -->
+   <bean id="userFactory" class="com.bdqn.factory.UserFactory"></bean>
+   <!--注入创建user，配置工厂
+      id ： 设置bean的名字
+      userFactory ：动态工厂的名字
+      factory-method ： 获取bean的方法
+   -->
+   <bean id="user" factory-bean="userFactory" factory-method="getUserByFactory"></bean>
 </beans>

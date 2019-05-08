@@ -10,5 +10,4 @@
 
     <bean id="user" class="com.bdqn.entity.User"></bean>
     <bean id="user1" class="com.bdqn.entity.User" scope="prototype" init-method="initUser" destroy-method="destoryUser"></bean>
-
 </beans>

@@ -9,7 +9,7 @@
 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
    <!--list注入-->
-   <bean id="user" class="com.bdqn.entity.User">
+   <bean id="user"  class="com.bdqn.entity.User">
       <property name="params">
          <list>
             <value>参数1</value>
